@@ -1,3 +1,8 @@
-[gd_scene format=3 uid="uid://crwigfb7c1a4g"]
+[gd_scene load_steps=2 format=3 uid="uid://crwigfb7c1a4g"]
+
+[ext_resource type="Script" uid="uid://csr2kcqyir4ih" path="res://coconut.gd" id="1_ig7tw"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="coconut" type="Node2D" parent="."]
+script = ExtResource("1_ig7tw")
