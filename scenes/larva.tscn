@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://cfdg206for2bb"]
+
+[ext_resource type="Texture2D" uid="uid://ddrc0d8dbt2tn" path="res://assets/tileset/base.png" id="1_yjc35"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ps16p"]
+atlas = ExtResource("1_yjc35")
+region = Rect2(64, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ng44"]
+atlas = ExtResource("1_yjc35")
+region = Rect2(0, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8fcn"]
+atlas = ExtResource("1_yjc35")
+region = Rect2(16, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lc318"]
+atlas = ExtResource("1_yjc35")
+region = Rect2(32, 112, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r62vg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ps16p")
+}],
+"loop": false,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ng44")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c8fcn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lc318")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Larva" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_r62vg")
+animation = &"dead"
+autoplay = "walk"

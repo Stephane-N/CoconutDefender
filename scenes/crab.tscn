@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://c4nwpcnar7m20"]
+
+[ext_resource type="Texture2D" uid="uid://ddrc0d8dbt2tn" path="res://assets/tileset/base.png" id="1_ow7wl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2b8bq"]
+atlas = ExtResource("1_ow7wl")
+region = Rect2(64, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rq6vx"]
+atlas = ExtResource("1_ow7wl")
+region = Rect2(0, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_83q5x"]
+atlas = ExtResource("1_ow7wl")
+region = Rect2(16, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rftv6"]
+atlas = ExtResource("1_ow7wl")
+region = Rect2(32, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hj1h3"]
+atlas = ExtResource("1_ow7wl")
+region = Rect2(48, 96, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ljolo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2b8bq")
+}],
+"loop": false,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rq6vx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_83q5x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rftv6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hj1h3")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Crab" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_ljolo")
+animation = &"dead"
+autoplay = "walk"

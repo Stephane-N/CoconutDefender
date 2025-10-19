@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://n8xhdny6rapv"]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 798.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="Gold" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "gold"
+
+[node name="Gold2" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "Wood"
+
+[node name="Gold3" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "Stone"
